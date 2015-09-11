@@ -1,12 +1,12 @@
 $(function() {
-	
+
 	/* ********** SUPERFISH MENU ********** */
-	$("ul#mainNav").superfish({ 
-		delay:       50,                              // delay on mouseout 
-		animation:   {opacity:'show',height:'show'},  // fade-in and slide-down animation 
-		speed:       'fast',                          // faster animation speed 
-		autoArrows:  false,                           // disable generation of arrow mark-up 
-		dropShadows: false                            // disable drop shadows 
+	$("ul#mainNav").superfish({
+		delay:       50,                              // delay on mouseout
+		animation:   {opacity:'show',height:'show'},  // fade-in and slide-down animation
+		speed:       'fast',                          // faster animation speed
+		autoArrows:  false,                           // disable generation of arrow mark-up
+		dropShadows: false                            // disable drop shadows
 	});
 
 	/* ********** BACKGROUND CHANGER ********** */
@@ -15,11 +15,11 @@ $(function() {
 		var background = $(this).attr('data-background');
 		$('body').removeClass("default dark_mosaic dark_wood dark_linen dark_stripes dark_leather").addClass(background);
 	});
-	
+
 	/* ********** BACK TO TOP BUTTON ********** */
 	$(window).scroll(function() {
 		if($(this).scrollTop() != 0) {
-			$('#toTop').fadeIn('slow');	
+			$('#toTop').fadeIn('slow');
 		} else {
 			$('#toTop').fadeOut('fast');
 		}
@@ -27,10 +27,10 @@ $(function() {
 	$('#toTop').click(function() {
 		$('body,html').stop().animate({scrollTop:0},800,'easeOutExpo');
 	});
-	
+
 	/* ********** LIGHTBOX PLUGIN ********** */
 	$('.lightbox').lightbox();
-	
+
 	/* ********** BLACK & WHITE PLUGIN ********** */
 	$(window).load(function(){
 		$('.bwWrapper').BlackAndWhite({
@@ -42,7 +42,7 @@ $(function() {
 			}
 		});
 	});
-	
+
 	/* ********** SCROLL-TO BUTTON ********** */
 	$('.scrollTo').click(function() {
 		$(this).parents('ul').children().removeClass('active');
@@ -51,7 +51,7 @@ $(function() {
 		var offset = elementToScroll.offset();
 		$('body,html').stop().animate({scrollTop:offset.top},800,'easeOutExpo');
 	});
-	
+
 	/* ********** SEQUENCE SLIDER ********** */
 	if ($('#sequence').length) {
 		var options = {
@@ -62,7 +62,7 @@ $(function() {
         }
 		var sequence = $("#sequence").sequence(options).data("sequence");
 	}
-	
+
 	/* ********** NIVO SLIDER ********** */
 	$(window).load(function() {
 		$('#slider').nivoSlider({
@@ -82,12 +82,12 @@ $(function() {
 			manualAdvance: false, // Force manual transitions
 			captionOpacity: 1, // Universal caption opacity
 			randomStart: false, // Start on a random slide
-			afterLoad: function(){$('#slider .nivo-caption').addClass('animateIn')},    
+			afterLoad: function(){$('#slider .nivo-caption').addClass('animateIn')},
 			beforeChange: function(){$('#slider .nivo-caption').removeClass('animateIn').addClass('animateOut')},
 			afterChange: function(){$('#slider .nivo-caption').removeClass('animateOut').addClass('animateIn')}
 		});
 	});
-	
+
 	/* ********** ISOTOPE ********** */
 	$('#portfolio_selector').fadeOut(0);
 	$(window).load(function () {
@@ -105,23 +105,23 @@ $(function() {
 			});
 		}
 	});
-	
+
 	/* ********** CAROUSEL ********** */
 	    $('.carousel').carousel({
 			interval: 3000
 		})
-	
-	/* 
-	********** MAKE ALERT ON MOBILE DEVICES that they can cause anchor links to stop working VISIBLE  ********** 
+
+	/*
+	********** MAKE ALERT ON MOBILE DEVICES that they can cause anchor links to stop working VISIBLE  **********
 	********** page: aboutus, element: sidenav affix  **********
 	*/
 	if( /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent) ) {
 		$('#mobile-alert').css('display','block');
 	}
-	
+
 	/* ********** MAPS ********** */
 	if ($('#map_canvas').length) {
-		
+
 		var mapStyles = [
 			{ featureType: "administrative", elementType: "all", stylers: [ { saturation: -70 } ] },
 			{ featureType: "landscape", elementType: "all", stylers: [ { saturation: -70 } ] },
@@ -130,21 +130,21 @@ $(function() {
 			{ featureType: "transit", elementType: "all", stylers: [ { saturation: -70 } ] },
 			{ featureType: "water", elementType: "all", stylers: [ { saturation: -30 } ] }
 		];
-		
+
 		function marker(markerLatLng, center, zoom) {
 			this.markerLatLng = markerLatLng;
 			this.center = center;
 			this.zoom = zoom;
 		}
-		
+
 		gmapOptions = new marker();
-		gmapOptions.center = [42.658721,18.086017];
-		gmapOptions.markerLatLng = [42.658721,18.086017];
+		gmapOptions.center = [-29.82371599999999,31.025492999999983];
+		gmapOptions.markerLatLng = [-29.82371599999999,31.025492999999983];
 		gmapOptions.zoom = 14;
 		$("#map_canvas").gmap3(
 			{action: 'init',
 			options:{
-				center:gmapOptions.center, 
+				center:gmapOptions.center,
 				zoom:gmapOptions.zoom,
 				scrollwheel: false
 				}
@@ -153,7 +153,7 @@ $(function() {
 				latLng:gmapOptions.markerLatLng
 			}
 		);
-		
+
 		$("#map_canvas").gmap3(
 			{action: 'setStyledMap',
 				styledmap:{
@@ -165,13 +165,13 @@ $(function() {
 				}
 			}
 		);
-		
+
 		$('.seeMap').click(function(event){
 			event.preventDefault();
-			
+
 			// clear all markers
 			$('#map_canvas').gmap3({action:'clear'});
-			
+
 			// add new marker
 			var newMarker = new marker();
 			newMarker.markerLatLng = $(this).attr('data-marker').split(",");
