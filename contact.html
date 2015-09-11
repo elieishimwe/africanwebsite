@@ -129,39 +129,45 @@
 
 
                 </div><!--span4-->
-
                 <div class="span6 offset1">
                     <h4>Contact form</h4>
                     <hr />
-                    <form class="form-horizontal" />
+                    <form class="form-horizontal" method="post" action="mail_handler.php" />
 
                         <fieldset>
 
                         <div class="control-group">
-                            <label for="name" class="control-label">Name</label>
+                            <label for="name" class="control-label">First Name</label>
                             <div class="controls">
-                                <input type="text" id="name" class="input-xlarge" />
+                                <input type="text" id="first_name" name="first_name" class="input-xlarge" />
+                            </div><!--controls-->
+                        </div><!--control-group-->
+
+                         <div class="control-group">
+                            <label for="name" class="control-label">Last Name</label>
+                            <div class="controls">
+                                <input type="text" id="last_name" name="last_name" class="input-xlarge" />
                             </div><!--controls-->
                         </div><!--control-group-->
 
                         <div class="control-group">
                             <label for="email" class="control-label">E-mail</label>
                             <div class="controls">
-                                <input type="text" id="email" class="input-xlarge" />
+                                <input type="text" id="email" name="email"  class="input-xlarge" />
                             </div><!--controls-->
                         </div><!--control-group-->
 
                         <div class="control-group">
                             <label for="phone" class="control-label">Phone</label>
                             <div class="controls">
-                                <input type="text" id="phone" class="input-xlarge" />
+                                <input type="text" id="phone" name="phone" class="input-xlarge" />
                             </div><!--controls-->
                         </div><!--control-group-->
 
                         <div class="control-group">
                             <label for="txt" class="control-label">Message</label>
                                 <div class="controls">
-                                    <textarea rows="6" id="txt" class="input-xlarge"></textarea>
+                                    <textarea rows="6" id="message" name="message" class="input-xlarge"></textarea>
                                 </div>
                         </div>
 
