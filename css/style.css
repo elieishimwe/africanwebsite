@@ -1017,11 +1017,11 @@ a.thumbnail:hover {
 }
 
 
-.spaceImage
+.team-member .spaceImage
 {
 
 	margin-bottom:60px !important;
-	background-color: transparent !important;
+	background-color: transparent; !important;
 	box-shadow: none !important;
 
 }
