@@ -614,13 +614,6 @@ ul.linksListFooter {
 }
 
 /* ABOUT US */
-.team-member {
-	background-color: rgba(0,153,255,0.2);
-	color: #FFFFFF;
-	-webkit-box-shadow: 1px 1px 2px #000000; /* h-shadow v-shadow blur spread color inset; */
-	-moz-box-shadow: 1px 1px 2px #000000;
-	box-shadow: 1px 1px 2px #000000;
-}
 
 .no-rgba .team-member {
 	background: url(../images/layout/transp_20.png);
@@ -1021,7 +1014,14 @@ a.thumbnail:hover {
 {
 
 	margin-bottom:60px !important;
-	background-color: transparent; !important;
-	box-shadow: none !important;
+
 
 }
+
+.team-member {
+	color: #FFFFFF;
+	-webkit-box-shadow: 1px 1px 2px #000000; /* h-shadow v-shadow blur spread color inset; */
+	-moz-box-shadow: 1px 1px 2px #000000;
+
+}
+
