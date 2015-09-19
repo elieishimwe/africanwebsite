@@ -1,4 +1,4 @@
-/* 
+/*
 	blue 		#0099FF / rgb(0,153,255)
 	light blue 	#70C6FF / rgb(112,198,255)
 */
@@ -12,7 +12,7 @@ body {
 	font-size: 13px;
 }
 
-/* 	BACKGROUND PATTERNS 
+/* 	BACKGROUND PATTERNS
 	ADD DESIRED CLASS TO BODY ELEMENT:
 	<body class="dark-wood">
 */
@@ -53,7 +53,7 @@ body {
 	display: block;
 }
 
-/* TYPOGRAPHY */ 
+/* TYPOGRAPHY */
 
 h1, h2, h3, h4, h5, h6 {
 	font-family: 'Open Sans Condensed', sans-serif;
@@ -233,7 +233,7 @@ a.accordion-toggle {
 	background: url(../images/layout/transp_20.png);
 }
 
-.nav-tabs > .active > a, 
+.nav-tabs > .active > a,
 .nav-tabs > .active > a:hover {
 	background-color: rgba(0,153,255,0.6);
 	border-color: #0099FF #0099FF transparent;
@@ -243,7 +243,7 @@ a.accordion-toggle {
 	color: #FFFFFF;
 }
 
-.no-rgba .nav-tabs > .active > a, 
+.no-rgba .nav-tabs > .active > a,
 .no-rgba .nav-tabs > .active > a:hover {
 	background: url(../images/layout/transp_60.png);
 }
@@ -437,7 +437,7 @@ header .input-prepend .add-on, header .input-append .add-on {
 	text-shadow: none;
 }
 
-.no-rgba header .input-prepend .add-on, 
+.no-rgba header .input-prepend .add-on,
 .no-rgba header .input-append .add-on {
 	background: url(../images/layout/transp_20.png);
 }
@@ -593,7 +593,7 @@ ul.linksListFooter {
 	border: none;
 }
 
-.no-rgba .pagination ul > li > a, 
+.no-rgba .pagination ul > li > a,
 .no-rgba .pagination ul > li > span {
 	background: url(../images/layout/transp_20.png);
 }
@@ -607,8 +607,8 @@ ul.linksListFooter {
 	background-color: rgba(0,153,255,0.4);
 }
 
-.no-rgba .pagination ul > li > a:hover, 
-.no-rgba .pagination ul > .active > a, 
+.no-rgba .pagination ul > li > a:hover,
+.no-rgba .pagination ul > .active > a,
 .no-rgba .pagination ul > .active > span {
 	background: url(../images/layout/transp_40.png);
 }
@@ -1014,4 +1014,14 @@ a.thumbnail:hover {
 	/*display:none;*/
 	color: #333333;
 	text-shadow: none;
+}
+
+
+.spaceImage
+{
+
+	margin-bottom:60px !important;
+	background-color: transparent !important;
+	box-shadow: none !important;
+
 }
