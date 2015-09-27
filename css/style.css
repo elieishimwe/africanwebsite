@@ -474,6 +474,7 @@ header .input-prepend .add-on, header .input-append .add-on {
 
 .colored {
 	color: #0099FF;
+	font-size: 12px;
 }
 
 img.alignleft,img.alignright,img.aligncenter,img.alignnone {
