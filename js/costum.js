@@ -138,8 +138,8 @@ $(function() {
 		}
 
 		gmapOptions = new marker();
-		gmapOptions.center = [-29.82371599999999,31.025492999999983];
-		gmapOptions.markerLatLng = [-29.82371599999999,31.025492999999983];
+		gmapOptions.center = [-29.8579,31.0276];
+		gmapOptions.markerLatLng = [-29.8579,31.0276];
 		gmapOptions.zoom = 14;
 		$("#map_canvas").gmap3(
 			{action: 'init',
