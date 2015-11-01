@@ -11,7 +11,7 @@
     $headers    = "From:" . $from;
     mail($to,$subject,$message,$headers);
 
-    echo "Mail Sent. Thank you " . $first_name . ", we will contact you shortly.";
+    echo "Mail Sent. Thank you " . $first_name . ", we may contact you shortly.";
     header('Location: contact.html');
 
 
